@@ -1,0 +1,6 @@
+flask==1.1.1
+gunicorn==20.0.4
+itsdangerous==2.0.1
+flask-mongoengine
+flask-cors
+

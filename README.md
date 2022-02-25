@@ -14,4 +14,4 @@ Una vez clonado el repositorio, seguir los siguientes pasos para la correcta eje
       --> > use webapp <-- (Indicamos el nombre de la DB)
       --> > db.createUser({user: 'apiuser', pwd: 'apipassword', roles: [{role: 'readWrite', db: 'webapp'}]}) <-- (Creamos un nuevo usuario)
       
-3- Ya tenemos corriendo la app en contenedores independientes..  
+3- Ya tenemos corriendo la app en contenedores independientes y acceso a la DB..

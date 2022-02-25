@@ -17,6 +17,7 @@ Una vez clonado el repositorio, seguir los siguientes pasos para la correcta eje
 3- Ya tenemos corriendo la app en contenedores independientes y acceso a la DB..
 
 4- Comprobación en "POSTMAN" del funcionamiento backend de la app:
+
       --> [GET] http://localhost:5000/tasks  (Obtenemos la lista completa de tareas almacenadas)..
       
       --> [POST] http://localhost:5000/tasks

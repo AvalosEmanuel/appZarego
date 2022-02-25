@@ -18,8 +18,8 @@ db = MongoEngine()
 db.init_app(app)
 
 class Task(db.Document):
-    title = db.StringField(max_length=20)
-    description = db.StringField(max_length=60)
+    title = db.StringField()
+    description = db.StringField()
     status = db.StringField()
 
 

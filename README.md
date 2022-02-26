@@ -17,7 +17,7 @@ La arquitectura del software recae en 3 contenedores Docker, dentro de los cuale
 
 ### Una vez clonado el repositorio, seguir los siguientes pasos para la correcta ejecución de la app:
 
-1- En línea de comandos ejecutar --> $ docker-compose up -d <-- (Levantamos los contenedores y los hacemos correr en segundo plano)
+1- En línea de comandos ejecutar --> $ **docker-compose up -d** <-- (Levantamos los contenedores y los hacemos correr en segundo plano)
 
 2- Modificar usuario y contraseña para acceder a la DB Mongo, para ello ejecutar en línea de comandos:
 

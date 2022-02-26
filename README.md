@@ -6,7 +6,7 @@ Se trata de una App tipo CRUD (Create, Read, Update and Delete). Es una agenda q
 También permite asignarle un estado actual a la taréa agendada (Pending - In Progress - Done)..
 
 
-## Las tecnologías involucradas en el proyecto son las siguientes: 
+### Tecnologías integradas en el proyecto: 
       >> Docker
       >> MongoDB
       >> Flask
@@ -15,7 +15,7 @@ También permite asignarle un estado actual a la taréa agendada (Pending - In P
 La arquitectura del software recae en 3 contenedores Docker, dentro de los cuales albergamos la DB (MongoDB) por un lado, la API (Flask) por otro y finalmente la interfaz de usuario (React.js).. Los mismos son orquestados por el archivo >> docker-compose.yml << que se encuentra en la raíz del proyecto. Para comprender la construcción de los contenedores de forma individuales visite el archivo >> Dockerfile << ubicados en las carpetas backend y frontend.
 
 
-## Una vez clonado el repositorio, seguir los siguientes pasos para la correcta ejecución de la app:
+### Una vez clonado el repositorio, seguir los siguientes pasos para la correcta ejecución de la app:
 
 1- En línea de comandos ejecutar --> $ docker-compose up -d <-- (Levantamos los contenedores y los hacemos correr en segundo plano)
 

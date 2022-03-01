@@ -16,45 +16,56 @@ export const Tasks = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-       if(!editing) {
-        const response = await fetch(`${API}/tasks/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                title,
-                description,
-                status
-            })
-        });
+        if(title.length < 1 || description.length < 1) {
+            alert("Formulario incompleto.. Rellena todos los campos..");
 
-        const data = await response.json();
-        console.log(data);
+            await getTasks(); 
 
-       } else {
-           const response = await fetch(`${API}/tasks/${id}`, {
-               method: 'PUT',
-               headers: {
-                   'Content-Type': 'application/json'
-               },
-               body: JSON.stringify({
-                   title,
-                   description,
-                   status
-               })
-           });
-           const data = await response.json();
-           console.log(data);
-           setEditing(false);
-           setId('');
-       }
+            setTitle('');
+            setDescription('');
+            setStatus('Pending');
+        } else {
 
-        await getTasks(); 
-
-        setTitle('');
-        setDescription('');
-        setStatus('');
+            if(!editing) {
+                const response = await fetch(`${API}/tasks/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        title,
+                        description,
+                        status
+                    })
+                });
+        
+                const data = await response.json();
+                console.log(data);
+        
+               } else {
+                   const response = await fetch(`${API}/tasks/${id}`, {
+                       method: 'PUT',
+                       headers: {
+                           'Content-Type': 'application/json'
+                       },
+                       body: JSON.stringify({
+                           title,
+                           description,
+                           status
+                       })
+                   });
+                   const data = await response.json();
+                   console.log(data);
+                   setEditing(false);
+                   setId('');
+               }
+        
+                await getTasks(); 
+        
+                setTitle('');
+                setDescription('');
+                setStatus('');
+        }
     };
     
     const getTasks = async () => { 
